@@ -141,7 +141,6 @@ h2 {
   resize: none;
 }
 
-/* Стили для кнопки "Отправить" */
 .send-button {
   display: block;
   margin: auto;
@@ -158,7 +157,6 @@ h2 {
   background-color: #0056b3;
 }
 
-/* Стили для кнопки закрытия окна */
 .close-button {
   position: absolute;
   top: 10px;
@@ -170,7 +168,6 @@ h2 {
   cursor: pointer;
 }
 
-/* Стили для крестика на кнопке закрытия */
 .close-button::before,
 .close-button::after {
   content: '';
