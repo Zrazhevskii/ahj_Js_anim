@@ -1,4 +1,191 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+  padding: 30px;
+}
+
+h2 {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.5em;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
 .wrapper {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   background-color: lightgray;
-  min-height: 70px;
+  padding: 30px;
+  border: 1px solid gray;
+  border-radius: 5px;
 } 
+
+.button {
+	display: inline-block;
+	text-align: center;
+	user-select: none;
+	border: 0.5px solid transparent;
+	padding: 10px 15px;
+	border-radius: 5px;
+	cursor: pointer;
+	color: #fff;
+	background-color: #56a7fd;
+	border-color: #007bff;
+
+	transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.button:hover {
+	background-color: #09488b;
+	border-color: none;
+}
+
+.container {
+	height: 0;
+	overflow: hidden;
+	transition: height 1s linear;
+}
+
+.show {
+	height: 130px;
+	transition: height 1s linear;
+}
+
+.box {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	min-width: 0;
+	word-wrap: break-word;
+	background-color: #fff;
+	background-clip: border-box;
+	border: 1px solid rgba(0,0,0,.125);
+	border-radius: 5px;
+	margin-top: 20px;
+	padding: 10px;
+}
+
+.chat-button {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  border-radius: 50%;
+  cursor: pointer;
+  border-style: none;
+
+  &:hover {
+    transform: scale(1.1);
+    transition: transform 2s;
+  }
+}
+
+.chat-button.chat-button-hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.chat-window {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 300px;
+  height: 300px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, visibility 0s 0.3s;
+}
+
+.chat-window-show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.chat-window-close {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, visibility 0s 0.3s;
+}
+
+.chat-window-title {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  font-size: 18px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.message-input {
+  width: 280px;
+  height: 200px;
+  padding: 10px;
+  box-sizing: border-box;
+  margin: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  resize: none;
+}
+
+/* Стили для кнопки "Отправить" */
+.send-button {
+  display: block;
+  margin: auto;
+  width: inherit;
+  padding: 10px 20px;
+  background-color: gray;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.send-button:hover {
+  background-color: #0056b3;
+}
+
+/* Стили для кнопки закрытия окна */
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/* Стили для крестика на кнопке закрытия */
+.close-button::before,
+.close-button::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 16px;
+  background-color: #ccc;
+  top: 2px;
+  left: 9px;
+}
+
+.close-button::before {
+  transform: rotate(45deg);
+}
+
+.close-button::after {
+  transform: rotate(-45deg);
+}
