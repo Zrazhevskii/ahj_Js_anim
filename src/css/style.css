@@ -1,9 +1,9 @@
 *,
 *::before,
 *::after {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -11,63 +11,67 @@ body {
 }
 
 h2 {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   font-size: 1.5em;
   text-align: center;
   margin-bottom: 10px;
 }
 
 .wrapper {
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   background-color: lightgray;
   padding: 30px;
   border: 1px solid gray;
   border-radius: 5px;
-} 
+}
 
 .button {
-	display: inline-block;
-	text-align: center;
-	user-select: none;
-	border: 0.5px solid transparent;
-	padding: 10px 15px;
-	border-radius: 5px;
-	cursor: pointer;
-	color: #fff;
-	background-color: #56a7fd;
-	border-color: #007bff;
+  display: inline-block;
+  text-align: center;
+  user-select: none;
+  border: 0.5px solid transparent;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #fff;
+  background-color: #56a7fd;
+  border-color: #007bff;
 
-	transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  transition:
+    color 0.15s ease-in-out,
+    background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
 }
 
 .button:hover {
-	background-color: #09488b;
-	border-color: none;
+  background-color: #09488b;
+  border-color: none;
 }
 
 .container {
-	height: 0;
-	overflow: hidden;
-	transition: height 1s linear;
+  height: 0;
+  overflow: hidden;
+  transition: height 1s linear;
 }
 
 .show {
-	height: 130px;
-	transition: height 1s linear;
+  height: 130px;
+  transition: height 1s linear;
 }
 
 .box {
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	min-width: 0;
-	word-wrap: break-word;
-	background-color: #fff;
-	background-clip: border-box;
-	border: 1px solid rgba(0,0,0,.125);
-	border-radius: 5px;
-	margin-top: 20px;
-	padding: 10px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 5px;
+  margin-top: 20px;
+  padding: 10px;
 }
 
 .chat-button {
@@ -104,21 +108,29 @@ h2 {
   opacity: 0;
   visibility: hidden;
   transform: translateY(20px);
-  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, visibility 0s 0.3s;
+  transition:
+    opacity 0.3s ease-in-out,
+    transform 0.3s ease-in-out,
+    visibility 0s 0.3s;
 }
 
 .chat-window-show {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
-  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition:
+    opacity 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
 }
 
 .chat-window-close {
   opacity: 0;
   visibility: hidden;
   transform: translateY(20px);
-  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, visibility 0s 0.3s;
+  transition:
+    opacity 0.3s ease-in-out,
+    transform 0.3s ease-in-out,
+    visibility 0s 0.3s;
 }
 
 .chat-window-title {
@@ -170,7 +182,7 @@ h2 {
 
 .close-button::before,
 .close-button::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 2px;
   height: 16px;
